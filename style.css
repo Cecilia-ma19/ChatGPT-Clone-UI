@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title span {
+  font-size: 1.5rem;
+  padding: 25px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+}
+
+.text-animation {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  width: 70%;
+  background-color: #ffffdb;
+  color: #fe7600fa;
+  align-items: center;
+  display: flex;
+  line-height: 1;
+}
+
+.text-animation2 h1,
+.text-animation2 p {
+  color: #f86e00;
+  margin-left: 32px; /* adiciona margem esquerda */
+}
+
+.text-animation2 h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f86e00;
+  margin-top: 40px;
+}
+
+.text-animation2 p {
+  font-size: 28px;
+  color: #f86e00;
+  margin-top: 10px;
+}
+
+.typing {
+  font-size: 28px;
+  color: #f86e00;
+  margin-top: 10px;
+  overflow: hidden;
+  border-right: 0.15em solid #f86e00;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.get-started {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  width: 40%;
+  color: #000;
+  background-color: #ffffff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.get-started h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.get-started-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.get-started-buttons button {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  background-color: #0070f3;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.get-started-buttons button:hover {
+  background-color: #0059c1;
+}
+
+.try-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: black;
+  font-weight: bolder;
+}
+
+.try-it {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+}
+
+.try-it img {
+  width: 30px;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .text-animation,
+  .get-started {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .text-animation2 h1,
+  .text-animation2 p {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .text-animation2 h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .get-started-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .get-started-buttons button {
+    width: 100%;
+  }
+
+  .try-it {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+  }
+  .try-it img {
+    width: 20px;
+    margin-top: 5px;
+  }
+}
